@@ -1,0 +1,15 @@
+C:\Projects\ProblemSolving\ReverseWordsInString\bin\Debug\net6.0\ReverseWordsInString.exe
+C:\Projects\ProblemSolving\ReverseWordsInString\bin\Debug\net6.0\ReverseWordsInString.deps.json
+C:\Projects\ProblemSolving\ReverseWordsInString\bin\Debug\net6.0\ReverseWordsInString.runtimeconfig.json
+C:\Projects\ProblemSolving\ReverseWordsInString\bin\Debug\net6.0\ReverseWordsInString.dll
+C:\Projects\ProblemSolving\ReverseWordsInString\bin\Debug\net6.0\ReverseWordsInString.pdb
+C:\Projects\ProblemSolving\ReverseWordsInString\obj\Debug\net6.0\ReverseWordsInString.csproj.AssemblyReference.cache
+C:\Projects\ProblemSolving\ReverseWordsInString\obj\Debug\net6.0\ReverseWordsInString.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projects\ProblemSolving\ReverseWordsInString\obj\Debug\net6.0\ReverseWordsInString.AssemblyInfoInputs.cache
+C:\Projects\ProblemSolving\ReverseWordsInString\obj\Debug\net6.0\ReverseWordsInString.AssemblyInfo.cs
+C:\Projects\ProblemSolving\ReverseWordsInString\obj\Debug\net6.0\ReverseWordsInString.csproj.CoreCompileInputs.cache
+C:\Projects\ProblemSolving\ReverseWordsInString\obj\Debug\net6.0\ReverseWordsInString.dll
+C:\Projects\ProblemSolving\ReverseWordsInString\obj\Debug\net6.0\refint\ReverseWordsInString.dll
+C:\Projects\ProblemSolving\ReverseWordsInString\obj\Debug\net6.0\ReverseWordsInString.pdb
+C:\Projects\ProblemSolving\ReverseWordsInString\obj\Debug\net6.0\ReverseWordsInString.genruntimeconfig.cache
+C:\Projects\ProblemSolving\ReverseWordsInString\obj\Debug\net6.0\ref\ReverseWordsInString.dll

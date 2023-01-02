@@ -5,7 +5,9 @@
 //S = i.like.this.program.very.much
 //Output: much.very.program.this.like.i
 
-string S = "i.like.this.program.very.much.promise";
+//string S = "i.like.this.program.very.much.promise";
+//string S = "i.like.this.program.very.much.promise";
+string S = "mno.pqr";
 S = reverseWords(S);
 
 Console.WriteLine(S);
@@ -20,10 +22,10 @@ string reverseWords(string inputString)
     for (int i = 0; i < midpoint; i++)
     {
         string temp1 = stringArray[i];
-        string temp2 = stringArray[stringArray.Length - 1];
+        string temp2 = stringArray[stringArray.Length - (1 + i)];
 
         stringArray[i] = temp2;
-        stringArray[stringArray.Length - 1] = temp1;
+        stringArray[stringArray.Length - (1 + i)] = temp1;
     }
 
     inputString = string.Join('.', stringArray);

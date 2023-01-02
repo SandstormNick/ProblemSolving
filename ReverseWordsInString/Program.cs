@@ -1,9 +1,18 @@
-﻿//Given a String S, reverse the string without reversing its individual words. Words are separated by dots.
+﻿//https://www.geeksforgeeks.org/must-do-coding-questions-for-companies-like-amazon-microsoft-adobe/
+
+//Given a String S, reverse the string without reversing its individual words. Words are separated by dots.
 
 //Example 1
 //Input:
 //S = i.like.this.program.very.much
 //Output: much.very.program.this.like.i
+
+//Your Task:
+//    You dont need to read input or print anything. 
+//   Complete the function reverseWords() which takes string S as 
+//        input parameter and returns a string containing the words in reversed order. 
+//    Each word in the returning string should also be separated by '.' 
+//-------------------------------------------------------------------------------------
 
 //string S = "i.like.this.program.very.much.promise";
 //string S = "i.like.this.program.very.much.promise";

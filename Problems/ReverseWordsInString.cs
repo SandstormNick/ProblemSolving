@@ -20,5 +20,10 @@
 
             return inputString;
         }
+
+        public string CleanString(string inputString)
+        {
+            return inputString.Replace(" ", ".");
+        }
     }
 }

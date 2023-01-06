@@ -19,6 +19,13 @@ namespace WebSite.Controllers
             return View(probsModel);
         }
 
+        public IActionResult StringPermutations()
+        {
+            var probsModel = new ProblemsModel();
+            probsModel.ProblemTitle = "String Permutations";
+            return View(probsModel);
+        }
+
         public IActionResult ReverseWords(ProblemsModel problems)
         {
             problems.ProblemTitle = "Reverse Words In String";
@@ -28,6 +35,16 @@ namespace WebSite.Controllers
             problems.StringAnswer = reverseWordsInString.reverseWords(problems.InputString);
 
             return View("ReverseWordsInString", problems);
+        }
+
+        public IActionResult GetPermutations(ProblemsModel problem)
+        {
+            problem.ProblemTitle = "String Permutations";
+
+            StringPermutations sr = new StringPermutations();
+            problem.ListStringAnswer = sr.find_permutation(problem.InputString);
+
+            return View("StringPermutations", problem);
         }
     }
 }

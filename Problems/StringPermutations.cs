@@ -6,23 +6,23 @@ using System.Threading.Tasks;
 
 namespace Problems
 {
-    internal class StringPermutations
+    public class StringPermutations
     {
         List<string> permutations { get; set; }
 
-        StringPermutations()
+        public StringPermutations()
         {
             permutations = new List<string>();
         }
 
-        List<string> find_permutation(string stringInput)
+        public List<string> find_permutation(string stringInput)
         {
             stringInput = sortString(stringInput);
 
             char[] charArray = stringInput.ToCharArray();
             find_permutaion(charArray, 0, charArray.Length - 1);
 
-            permutations.Sort(); //find_permutation is not returning it in lexicographical order though
+            permutations.Sort(); //find_permutation is not returning it in lexicographical order though - fancy for alphabetical
 
             return permutations;
         }

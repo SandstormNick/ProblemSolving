@@ -25,7 +25,7 @@ namespace WebSite.Controllers
 
             ReverseWordsInString reverseWordsInString = new ReverseWordsInString();
             problems.InputString = reverseWordsInString.CleanString(problems.InputString);
-            problems.Answer = reverseWordsInString.reverseWords(problems.InputString);
+            problems.StringAnswer = reverseWordsInString.reverseWords(problems.InputString);
 
             return View("ReverseWordsInString", problems);
         }

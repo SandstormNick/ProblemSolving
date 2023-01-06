@@ -7,11 +7,11 @@
         <form asp-action="ReverseWords">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="Answer" class="control-label"></label>
+                <label asp-for="StringAnswer" class="control-label"></label>
                 @{
-                    if (!string.IsNullOrEmpty(Model.Answer))
+                    if (!string.IsNullOrEmpty(Model.StringAnswer))
                     {
-                        <p>@Model.Answer</p>
+                        <p>@Model.StringAnswer</p>
                     }
                 }
                 <input asp-for="InputString" class="form-control" />

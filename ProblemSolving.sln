@@ -5,9 +5,11 @@ VisualStudioVersion = 17.2.32630.192
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StringPermutations", "StringPermutations\StringPermutations.csproj", "{97276C52-198F-4455-B1C1-A4BBF62D7D87}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebSite", "WebSite\WebSite.csproj", "{CEA0F06C-DE8A-4080-BC10-678151248C47}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebSite", "WebSite\WebSite.csproj", "{CEA0F06C-DE8A-4080-BC10-678151248C47}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Problems", "Problems\Problems.csproj", "{D321C0C0-6096-4CB4-8D06-B68A4274BC51}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Problems", "Problems\Problems.csproj", "{D321C0C0-6096-4CB4-8D06-B68A4274BC51}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTest", "UnitTest\UnitTest.csproj", "{E90CD5F3-F1EE-4119-9185-1A6B4D71E2F9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{D321C0C0-6096-4CB4-8D06-B68A4274BC51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D321C0C0-6096-4CB4-8D06-B68A4274BC51}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D321C0C0-6096-4CB4-8D06-B68A4274BC51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E90CD5F3-F1EE-4119-9185-1A6B4D71E2F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E90CD5F3-F1EE-4119-9185-1A6B4D71E2F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E90CD5F3-F1EE-4119-9185-1A6B4D71E2F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E90CD5F3-F1EE-4119-9185-1A6B4D71E2F9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

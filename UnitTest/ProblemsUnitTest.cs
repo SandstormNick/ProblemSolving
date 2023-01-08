@@ -25,5 +25,19 @@ namespace UnitTest
             longestPalin = lp.longestPalin(longestPalin);
             Assert.AreEqual("xyzyx", longestPalin);
         }
+
+        [TestMethod]
+        public void DistinctCharacters_LongestSubstrDitinctChars()
+        {
+            DistinctCharacters dc = new DistinctCharacters();
+
+            string testString = "geeksforgeeks";
+            testString = dc.LongestSubstrDitinctChars(testString);
+            Assert.AreEqual("efgkors", testString);
+
+            testString = "aaa";
+            testString = dc.LongestSubstrDitinctChars(testString);
+            Assert.AreEqual("a", testString);
+        }
     }
 }

@@ -3,10 +3,31 @@
 <h4>@Model.ProblemTitle</h4>
 <hr />
 <div class="row">
-    <div class="col-md-4">
+    <div class="col-md-6">
+        <div>
+            <p>Given a string S, find the longest palindromic substring in S. Palindrome string: A string which reads the same backwards. Incase of conflict, return the substring which occurs first ( with the least starting index).</p>
+            <p><strong>Example 1:</strong></p>
+        </div>
+        <div>
+            <strong>Input: </strong> S = "aaaabbaa"
+            <strong>Output: </strong> aabbaa
+            <strong>Explanation: </strong> The longest Palindromic substring is "aabbaa".
+        </div>
+        <div>
+            <p><strong>Example 2:</strong></p>
+        </div>
+        <div>
+            <strong>Input: </strong> S = "abc"
+            <strong>Output: </strong> a
+            <strong>Explanation: </strong> "a", "b" and "c" are the longest palindromes with same length. The result is the one with the least starting index.
+        </div>
+    </div>
+    <div class="col-md-6">
         <form asp-action="GetLongestPalindrome">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
+                <input asp-for="InputString" class="form-control" />
+                <span asp-validation-for="InputString" class="text-danger"></span>
                 <label asp-for="StringAnswer" class="control-label"></label>
                 @{
                     if (!string.IsNullOrEmpty(Model.StringAnswer))
@@ -14,18 +35,15 @@
                         <p>@Model.StringAnswer</p>
                     }
                 }
-                <input asp-for="InputString" class="form-control" />
-                <span asp-validation-for="InputString" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Longest Palindrome" class="btn btn-primary" />
             </div>
         </form>
+        <div>
+            <a asp-action="Index">Back to List</a>
+        </div>
     </div>
-</div>
-
-<div>
-    <a asp-action="Index">Back to List</a>
 </div>
 
 @section Scripts {

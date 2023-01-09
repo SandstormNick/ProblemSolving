@@ -26,6 +26,13 @@ namespace WebSite.Controllers
             return View(probsModel);
         }
 
+        public IActionResult DistinctCharacters()
+        {
+            var probsModel = new ProblemsModel();
+            probsModel.ProblemTitle = "Longest Distinct characters in string";
+            return View(probsModel);
+        }
+
         public IActionResult ReverseWords(ProblemsModel problems)
         {
             problems.ProblemTitle = "Reverse Words In String";
@@ -45,6 +52,16 @@ namespace WebSite.Controllers
             problems.StringAnswer = lp.longestPalin(problems.InputString);
 
             return View("LongestPalindrome", problems);
+        }
+
+        public IActionResult GetDistinctCharacters(ProblemsModel problems)
+        {
+            problems.ProblemTitle = "Longest Distinct characters in string";
+
+            DistinctCharacters dc = new DistinctCharacters();
+            problems.StringAnswer = dc.LongestSubstrDitinctChars(problems.InputString);
+
+            return View("DistinctCharacters", problems);
         }
     }
 }

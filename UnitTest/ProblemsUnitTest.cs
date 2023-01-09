@@ -25,5 +25,32 @@ namespace UnitTest
             longestPalin = lp.longestPalin(longestPalin);
             Assert.AreEqual("xyzyx", longestPalin);
         }
+
+        [TestMethod]
+        public void DistinctCharacters_LongestSubstrDitinctChars()
+        {
+            DistinctCharacters dc = new DistinctCharacters();
+
+            string testString = "geeksforgeeks";
+            testString = dc.LongestSubstrDitinctChars(testString);
+            Assert.AreEqual("efgkors", testString);
+
+            testString = "aaa";
+            testString = dc.LongestSubstrDitinctChars(testString);
+            Assert.AreEqual("a", testString);
+        }
+
+        [TestMethod]
+        public void ProblemSolving_RecursiveRemove()
+        {
+            ProblemSolving ps = new ProblemSolving();
+            string testString = "geeksforgeek";
+            testString = ps.RecursiveRemove(testString);
+            Assert.AreEqual("gksforgk", testString);
+
+            testString = "abccbccba";
+            testString = ps.RecursiveRemove(testString);
+            Assert.AreEqual("", testString);
+        }
     }
 }

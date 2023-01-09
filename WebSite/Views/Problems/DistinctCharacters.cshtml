@@ -3,10 +3,31 @@
 <h4>@Model.ProblemTitle</h4>
 <hr />
 <div class="row">
+    <div class="col-md-6">
+        <div>
+            <p>Given a string S, find length of the longest substring with all distinct characters. </p>
+            <p><strong>Example 1:</strong></p>
+        </div>
+        <div>
+            <strong>Input: </strong> S = "geeksforgeeks"
+            <strong>Output: </strong> 7
+            <strong>Explanation: </strong> "eksforg" is the longest substring with all distinct characters.
+        </div>
+        <div>
+            <p><strong>Example 2:</strong></p>
+        </div>
+        <div>
+            <strong>Input: </strong> S = "aaa"
+            <strong>Output: </strong> 1
+            <strong>Explanation: </strong> "a" is the longest substring with all distinct characters.
+        </div>
+    </div>
     <div class="col-md-4">
         <form asp-action="GetDistinctCharacters">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
+                <input asp-for="InputString" class="form-control" />
+                <span asp-validation-for="InputString" class="text-danger"></span>
                 <label asp-for="StringAnswer" class="control-label"></label>
                 @{
                     if (!string.IsNullOrEmpty(Model.StringAnswer))
@@ -14,8 +35,6 @@
                         <p>@Model.StringAnswer</p>
                     }
                 }
-                <input asp-for="InputString" class="form-control" />
-                <span asp-validation-for="InputString" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Distinct" class="btn btn-primary" />

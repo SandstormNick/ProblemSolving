@@ -39,5 +39,18 @@ namespace UnitTest
             testString = dc.LongestSubstrDitinctChars(testString);
             Assert.AreEqual("a", testString);
         }
+
+        [TestMethod]
+        public void ProblemSolving_RecursiveRemove()
+        {
+            ProblemSolving ps = new ProblemSolving();
+            string testString = "geeksforgeek";
+            testString = ps.RecursiveRemove(testString);
+            Assert.AreEqual("gksforgk", testString);
+
+            testString = "abccbccba";
+            testString = ps.RecursiveRemove(testString);
+            Assert.AreEqual("", testString);
+        }
     }
 }

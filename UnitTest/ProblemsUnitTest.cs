@@ -52,5 +52,19 @@ namespace UnitTest
             testString = ps.RecursiveRemove(testString);
             Assert.AreEqual("", testString);
         }
+
+        [TestMethod]
+        public void ProblemSolving_IsRotated()
+        {
+            ProblemSolving ps = new ProblemSolving();
+            string rotateString = "amazon", compareString = "azonam";
+            Assert.IsTrue(ps.IsRotated(rotateString, compareString));
+
+            rotateString = "amazon"; compareString = "onamaz";
+            Assert.IsTrue(ps.IsRotated(rotateString, compareString));
+
+            rotateString = "geeksforgeeks"; compareString = "geeksgeeksfor";
+            Assert.IsFalse(ps.IsRotated(rotateString, compareString));
+        }
     }
 }

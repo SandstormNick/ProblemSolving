@@ -8,6 +8,7 @@ namespace Problems
 {
     public class ProblemSolving
     {
+        //Not added to website yet
         public string RecursiveRemove(string inputString)
         {
             char[] charArray = inputString.ToCharArray();
@@ -48,6 +49,24 @@ namespace Problems
             
 
             return new string(charList.ToArray());
+        }
+
+        //Not added to website yet
+        public bool IsRotated(string rotateString, string compareString)
+        {
+            string originalString = rotateString;
+
+            rotateString = rotateString.Substring(2, rotateString.Length - 2) + rotateString.Substring(0,2);
+            if (rotateString == compareString)
+                return true;
+            else
+                rotateString = originalString;
+
+            rotateString = rotateString.Substring(rotateString.Length - 2, 2) + rotateString.Substring(0, rotateString.Length - 2);
+            if (rotateString == compareString)
+                return true;
+
+            return false;
         }
     }
 }

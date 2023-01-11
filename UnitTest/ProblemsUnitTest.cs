@@ -66,5 +66,13 @@ namespace UnitTest
             rotateString = "geeksforgeeks"; compareString = "geeksgeeksfor";
             Assert.IsFalse(ps.IsRotated(rotateString, compareString));
         }
+
+        [TestMethod]
+        public void ProblemSolving_RomanToDecimal()
+        {
+            ProblemSolving ps = new ProblemSolving();
+            string romanNumeral = "CXC";
+            ps.RomanToDecimal(romanNumeral);
+        }
     }
 }

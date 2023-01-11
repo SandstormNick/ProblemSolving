@@ -68,5 +68,106 @@ namespace Problems
 
             return false;
         }
+
+        public int RomanToDecimal(string romanNumber)
+        {
+            //Method caters for Roman Numerals below 5000
+            char[] charsArray = romanNumber.ToCharArray();
+            int total = 0;
+
+            for (int i = 0; i < charsArray.Length; i++)
+            {
+                if (charsArray[i] == 'M')
+                {
+                    if (i != 0)
+                    {
+                        if (charsArray[i-1] == 'C')
+                        {
+                            total += 900;
+                        }
+                        else
+                        {
+                            total += 1000;
+                        }
+                    }
+                    else
+                    {
+                        total += 1000;
+                    }
+                }
+
+                if (charsArray[i] == 'D')
+                {
+                    if (i != 0)
+                    {
+                        if (charsArray[i-1] == 'C')
+                        {
+                            total += 400;
+                        }
+                        else
+                        {
+                            total += 500;
+                        }
+                    }
+                    else
+                    {
+                        total += 500;
+                    }
+                }
+
+                if (charsArray[i] == 'C')
+                {
+                    if (i != 0)
+                    {
+                        if (charsArray[i - 1] == 'X')
+                            total += 90;
+                        else
+                            total = 100;
+                    }
+                    else
+                    {
+                        if (charsArray[i+1] != 'D' || charsArray[i+1] != 'M')
+                        {
+                            total += 100;
+                        }
+                    }
+                }
+
+                if (charsArray[i] == 'L')
+                {
+                    if (i != 0)
+                    {
+                        if (charsArray[i - 1] == 'X')
+                            total += 40;
+                        else
+                            total = 50;
+                    }
+                    else
+                    {
+                        total += 50;
+                    }
+                }
+
+                if (charsArray[i] == 'X')
+                {
+
+                }
+
+                if (charsArray[i] == 'V')
+                {
+
+                }
+
+                if (charsArray[i] == 'I')
+                {
+
+                }
+                
+                
+                
+            }
+
+            return total;
+        }
     }
 }

@@ -71,8 +71,17 @@ namespace UnitTest
         public void ProblemSolving_RomanToDecimal()
         {
             ProblemSolving ps = new ProblemSolving();
-            string romanNumeral = "CXC";
-            ps.RomanToDecimal(romanNumeral);
+            string romanNumeral = "MMMCMXCIX";
+            int number = ps.RomanToDecimal(romanNumeral);
+            Assert.AreEqual(3999, number);
+
+            romanNumeral = "CCCXLVIII";
+            number = ps.RomanToDecimal(romanNumeral);
+            Assert.AreEqual(348, number);
+
+            romanNumeral = "LXXVII";
+            number = ps.RomanToDecimal(romanNumeral);
+            Assert.AreEqual(77, number);
         }
     }
 }

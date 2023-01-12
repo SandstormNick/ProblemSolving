@@ -69,8 +69,11 @@ namespace Problems
             return false;
         }
 
+        //Not added to website yet
         public int RomanToDecimal(string romanNumber)
         {
+            //A switch case would be easier to read
+
             //Method caters for Roman Numerals below 5000
             char[] charsArray = romanNumber.ToCharArray();
             int total = 0;
@@ -81,14 +84,10 @@ namespace Problems
                 {
                     if (i != 0)
                     {
-                        if (charsArray[i-1] == 'C')
-                        {
+                        if (charsArray[i - 1] == 'C')
                             total += 900;
-                        }
                         else
-                        {
                             total += 1000;
-                        }
                     }
                     else
                     {
@@ -100,14 +99,10 @@ namespace Problems
                 {
                     if (i != 0)
                     {
-                        if (charsArray[i-1] == 'C')
-                        {
+                        if (charsArray[i - 1] == 'C')
                             total += 400;
-                        }
                         else
-                        {
                             total += 500;
-                        }
                     }
                     else
                     {
@@ -122,14 +117,16 @@ namespace Problems
                         if (charsArray[i - 1] == 'X')
                             total += 90;
                         else
-                            total = 100;
+                        {
+                            if (charsArray[i + 1] != 'D' && charsArray[i + 1] != 'M')
+                                total += 100;
+                        }
+                        
                     }
                     else
                     {
-                        if (charsArray[i+1] != 'D' || charsArray[i+1] != 'M')
-                        {
+                        if (charsArray[i+1] != 'D' && charsArray[i+1] != 'M')
                             total += 100;
-                        }
                     }
                 }
 
@@ -140,30 +137,71 @@ namespace Problems
                         if (charsArray[i - 1] == 'X')
                             total += 40;
                         else
-                            total = 50;
+                        {
+                            total += 50;
+                        }
                     }
                     else
                     {
-                        total += 50;
+                        if (charsArray[i + 1] != 'D' && charsArray[i + 1] != 'M')
+                            total += 50;
                     }
                 }
 
                 if (charsArray[i] == 'X')
                 {
-
+                    if (i != 0)
+                    {
+                        if (charsArray[i - 1] == 'I')
+                            total += 9;
+                        else
+                        {
+                            if (charsArray[i + 1] != 'L' && charsArray[i + 1] != 'C')
+                                total += 10;
+                        }
+                    }
+                    else
+                    {
+                        if (charsArray[i + 1] != 'L' && charsArray[i + 1] != 'C')
+                        {
+                            total += 10;
+                        }
+                    }
                 }
 
                 if (charsArray[i] == 'V')
                 {
-
+                    if (i != 0)
+                    {
+                        if (charsArray[i - 1] == 'I')
+                            total += 4;
+                        else
+                            total += 5;
+                    }
+                    else
+                    {
+                        total += 5;
+                    }
                 }
 
                 if (charsArray[i] == 'I')
                 {
-
+                    if (i != 0)
+                    {
+                        if (charsArray[i - 1] == 'I')
+                            total += 1;
+                        else
+                        {
+                            if (charsArray[i + 1] != 'X' && charsArray[i + 1] != 'V')
+                                total += 1;
+                        }
+                    }
+                    else
+                    {
+                        if (charsArray[i + 1] == 'I')
+                            total += 1;
+                    }
                 }
-                
-                
                 
             }
 

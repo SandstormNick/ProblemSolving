@@ -118,15 +118,28 @@ namespace Problems
                             total += 90;
                         else
                         {
-                            if (charsArray[i + 1] != 'D' && charsArray[i + 1] != 'M')
+                            if (i < charsArray.Length - 1)
+                            {
+                                if (charsArray[i + 1] != 'D' && charsArray[i + 1] != 'M')
+                                    total += 100;
+                            }
+                            else
+                            {
                                 total += 100;
+                            }
                         }
-                        
                     }
                     else
                     {
-                        if (charsArray[i+1] != 'D' && charsArray[i+1] != 'M')
+                        if (i < charsArray.Length - 1)
+                        {
+                            if (charsArray[i + 1] != 'D' && charsArray[i + 1] != 'M')
+                                total += 100;
+                        }
+                        else
+                        {
                             total += 100;
+                        }
                     }
                 }
 
@@ -143,8 +156,15 @@ namespace Problems
                     }
                     else
                     {
-                        if (charsArray[i + 1] != 'D' && charsArray[i + 1] != 'M')
+                        if (i < charsArray.Length - 1)
+                        {
+                            if (charsArray[i + 1] != 'D' && charsArray[i + 1] != 'M')
+                                total += 50;
+                        }
+                        else
+                        {
                             total += 50;
+                        }
                     }
                 }
 
@@ -156,16 +176,28 @@ namespace Problems
                             total += 9;
                         else
                         {
-                            if (charsArray[i + 1] != 'L' && charsArray[i + 1] != 'C')
+                            if (i < charsArray.Length - 1)
+                            {
+                                if (charsArray[i + 1] != 'L' && charsArray[i + 1] != 'C')
+                                    total += 10;
+                            }
+                            else
+                            {
                                 total += 10;
+                            }
                         }
                     }
                     else
                     {
-                        if (charsArray[i + 1] != 'L' && charsArray[i + 1] != 'C')
+                        if (i < charsArray.Length - 1)
+                        {
+                            if (charsArray[i + 1] != 'L' && charsArray[i + 1] != 'C')
+                                total += 10;
+                        }
+                        else
                         {
                             total += 10;
-                        }
+                        }   
                     }
                 }
 
@@ -192,14 +224,29 @@ namespace Problems
                             total += 1;
                         else
                         {
-                            if (charsArray[i + 1] != 'X' && charsArray[i + 1] != 'V')
+                            if (i < charsArray.Length - 1)
+                            {
+                                if (charsArray[i + 1] != 'X' && charsArray[i + 1] != 'V')
+                                    total += 1;
+                            }
+                            else
+                            {
                                 total += 1;
+                            }
                         }
                     }
                     else
                     {
-                        if (charsArray[i + 1] == 'I')
+                        if (i < charsArray.Length - 1)
+                        {
+                            if (charsArray[i + 1] == 'I')
+                                total += 1;
+                        }
+                        else
+                        {
                             total += 1;
+                        }
+                            
                     }
                 }
                 

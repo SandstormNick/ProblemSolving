@@ -41,6 +41,14 @@ namespace WebSite.Controllers
             return View(probsModel);
         }
 
+        public IActionResult RomanToInteger()
+        {
+            var probsModel = new ProblemsModel();
+            probsModel.ProblemTitle = "Roman To Integer";
+
+            return View(probsModel);
+        }
+
         public IActionResult ReverseWords(ProblemsModel problems)
         {
             problems.ProblemTitle = "Reverse Words In String";
@@ -80,6 +88,17 @@ namespace WebSite.Controllers
             problem.ListStringAnswer = sr.find_permutation(problem.InputString);
 
             return View("StringPermutations", problem);
-        } 
+        }
+
+        public IActionResult ConvertRomanToInteger(ProblemsModel problem)
+        {
+            problem.ProblemTitle = "Roman To Integer";
+
+            ProblemSolving ps = new ProblemSolving();
+            problem.InputString = problem.InputString.ToUpper();
+            problem.StringAnswer = ps.RomanToDecimal(problem.InputString).ToString();
+
+            return View("RomanToInteger", problem);
+        }
     }
 }

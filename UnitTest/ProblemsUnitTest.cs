@@ -82,6 +82,10 @@ namespace UnitTest
             romanNumeral = "LXXVII";
             number = ps.RomanToDecimal(romanNumeral);
             Assert.AreEqual(77, number);
+
+            romanNumeral = "I";
+            number = ps.RomanToDecimal(romanNumeral);
+            Assert.AreEqual(1, number);
         }
     }
 }

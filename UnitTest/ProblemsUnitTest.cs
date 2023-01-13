@@ -52,5 +52,40 @@ namespace UnitTest
             testString = ps.RecursiveRemove(testString);
             Assert.AreEqual("", testString);
         }
+
+        [TestMethod]
+        public void ProblemSolving_IsRotated()
+        {
+            ProblemSolving ps = new ProblemSolving();
+            string rotateString = "amazon", compareString = "azonam";
+            Assert.IsTrue(ps.IsRotated(rotateString, compareString));
+
+            rotateString = "amazon"; compareString = "onamaz";
+            Assert.IsTrue(ps.IsRotated(rotateString, compareString));
+
+            rotateString = "geeksforgeeks"; compareString = "geeksgeeksfor";
+            Assert.IsFalse(ps.IsRotated(rotateString, compareString));
+        }
+
+        [TestMethod]
+        public void ProblemSolving_RomanToDecimal()
+        {
+            ProblemSolving ps = new ProblemSolving();
+            string romanNumeral = "MMMCMXCIX";
+            int number = ps.RomanToDecimal(romanNumeral);
+            Assert.AreEqual(3999, number);
+
+            romanNumeral = "CCCXLVIII";
+            number = ps.RomanToDecimal(romanNumeral);
+            Assert.AreEqual(348, number);
+
+            romanNumeral = "LXXVII";
+            number = ps.RomanToDecimal(romanNumeral);
+            Assert.AreEqual(77, number);
+
+            romanNumeral = "I";
+            number = ps.RomanToDecimal(romanNumeral);
+            Assert.AreEqual(1, number);
+        }
     }
 }

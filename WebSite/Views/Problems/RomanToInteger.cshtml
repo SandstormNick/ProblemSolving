@@ -1,0 +1,49 @@
+﻿@model WebSite.Models.ProblemsModel
+
+<h4>@Model.ProblemTitle</h4>
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <div>
+            <p>Given a string in roman no format (s)  your task is to convert it to an integer . Various symbols and their values are given below.</p>
+            <p><strong>Example 1:</strong></p>
+        </div>
+        <div>
+            <strong>Input: </strong> V
+            <strong>Output: </strong> 5
+        </div>
+        <div>
+            <p><strong>Example 2:</strong></p>
+        </div>
+        <div>
+            <strong>Input: </strong> III
+            <strong>Output: </strong> 3
+        </div>
+    </div>
+    <div class="col-md-6">
+        <form asp-action="ConvertRomanToInteger">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <input asp-for="InputString" class="form-control" />
+                <span asp-validation-for="InputString" class="text-danger"></span>
+                <label asp-for="StringAnswer" class="control-label"></label>
+                @{
+                    if (!string.IsNullOrEmpty(Model.StringAnswer))
+                    {
+                        <p>@Model.StringAnswer</p>
+                    }
+                }
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Convert" class="btn btn-primary" />
+            </div>
+        </form>
+        <div>
+            <a asp-action="Index">Back to List</a>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

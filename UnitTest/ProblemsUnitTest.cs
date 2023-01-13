@@ -87,5 +87,18 @@ namespace UnitTest
             number = ps.RomanToDecimal(romanNumeral);
             Assert.AreEqual(1, number);
         }
+
+        [TestMethod]
+        public void ProblemSolving_IsAnagram()
+        {
+            ProblemSolving ps = new ProblemSolving();
+            string stringA = "geeksforgeeks";
+            string stringB = "forgeeksgeeks";
+            Assert.IsTrue(ps.IsAnagram(stringA, stringB));
+
+            stringA = "allergic";
+            stringB = "allergy";
+            Assert.IsFalse(ps.IsAnagram(stringA, stringB));
+        }
     }
 }

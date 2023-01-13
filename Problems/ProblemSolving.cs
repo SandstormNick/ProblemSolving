@@ -253,5 +253,25 @@ namespace Problems
 
             return total;
         }
+
+        public bool IsAnagram(string stringA, string stringB)
+        {
+            stringA = stringA.ToLower();
+            stringB = stringB.ToLower();
+
+            char[] charArrayA = stringA.ToCharArray();
+            char[] charArrayB = stringB.ToCharArray();
+
+            Array.Sort(charArrayA);
+            Array.Sort(charArrayB);
+
+            stringA = new string(charArrayA);
+            stringB = new string(charArrayB);
+
+            if (stringA == stringB)
+                return true;
+            else
+                return false;
+        }
     }
 }

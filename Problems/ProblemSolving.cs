@@ -254,6 +254,7 @@ namespace Problems
             return total;
         }
 
+        //Not added to website yet
         public bool IsAnagram(string stringA, string stringB)
         {
             stringA = stringA.ToLower();
@@ -272,6 +273,15 @@ namespace Problems
                 return true;
             else
                 return false;
+        }
+
+        //Not added to website yet
+        public string RemoveDups(string inputString)
+        {
+            //need to split string into list of individual characters
+            //add a list that keeps track of unique characters
+
+            return inputString;
         }
     }
 }

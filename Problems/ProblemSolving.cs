@@ -278,8 +278,24 @@ namespace Problems
         //Not added to website yet
         public string RemoveDups(string inputString)
         {
-            //need to split string into list of individual characters
-            //add a list that keeps track of unique characters
+            char[] charArray = inputString.ToCharArray();
+            List<char> oringalChars = new List<char>(charArray);
+            List<char> uniqueChars = new List<char>();
+
+            for (int i = 0; i < oringalChars.Count; i++)
+            {
+                if (uniqueChars.Contains(oringalChars[i]))
+                {
+                    oringalChars.RemoveAt(i);
+                    i -= 1;
+                }
+                else
+                {
+                    uniqueChars.Add(oringalChars[i]);
+                }
+            }
+
+            inputString = new string(oringalChars.ToArray());
 
             return inputString;
         }

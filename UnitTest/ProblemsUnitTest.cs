@@ -100,5 +100,18 @@ namespace UnitTest
             stringB = "allergy";
             Assert.IsFalse(ps.IsAnagram(stringA, stringB));
         }
+
+        [TestMethod]
+        public void ProblemSolving_RemoveDups()
+        {
+            ProblemSolving ps = new ProblemSolving();
+            string stringInput = "zvvo";
+            stringInput = ps.RemoveDups(stringInput);
+            Assert.AreEqual("zvo", stringInput);
+
+            stringInput = "ffofofxxxxxfofofyofy";
+            stringInput = ps.RemoveDups(stringInput);
+            Assert.AreEqual("foxy", stringInput);
+        }
     }
 }

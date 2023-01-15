@@ -299,5 +299,40 @@ namespace Problems
 
             return inputString;
         }
+
+        //Not added to website yet
+        public int CountMin(string stringInput)
+        {
+            char[] charArray = stringInput.ToCharArray();
+            bool isPalindrome = true;
+            int i = 0;
+
+            while (isPalindrome && i < charArray.Length - 1)
+            {
+                if (charArray[i] != charArray[charArray.Length - (i + 1)])
+                    isPalindrome = false;
+
+                i++;
+            }
+
+            if (isPalindrome)
+                return 0;
+
+            //check for string of matching chars on either end of the string
+            bool matchingChars = true;
+            int matchingCharsCount = 1;
+            int x = 0;
+            while (matchingChars && x < charArray.Length - 1)
+            {
+                if ((charArray[x] != charArray[x + 1]) && (charArray[charArray.Length - (x + 1)] != charArray[charArray.Length - (x + 2)]))
+                    matchingChars = false;
+                else
+                    matchingCharsCount++;
+
+                x++;
+            }
+
+            return charArray.Length - matchingCharsCount;
+        }
     }
 }

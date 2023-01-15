@@ -113,5 +113,30 @@ namespace UnitTest
             stringInput = ps.RemoveDups(stringInput);
             Assert.AreEqual("foxy", stringInput);
         }
+
+        [TestMethod]
+        public void ProblemSolving_CountMin()
+        {
+            ProblemSolving ps = new ProblemSolving();
+            string stringInput = "abcd";
+            int number = ps.CountMin(stringInput);
+            Assert.AreEqual(3, number);
+
+            stringInput = "abcba";
+            number = ps.CountMin(stringInput);
+            Assert.AreEqual(0, number);
+
+            stringInput = "aa";
+            number = ps.CountMin(stringInput);
+            Assert.AreEqual(0, number);
+
+            stringInput = "aaabcc";
+            number = ps.CountMin(stringInput);
+            Assert.AreEqual(3, number);
+
+            stringInput = "xyfghtm";
+            number = ps.CountMin(stringInput);
+            Assert.AreEqual(6, number);
+        }
     }
 }

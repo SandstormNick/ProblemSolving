@@ -253,5 +253,86 @@ namespace Problems
 
             return total;
         }
+
+        //Not added to website yet
+        public bool IsAnagram(string stringA, string stringB)
+        {
+            stringA = stringA.ToLower();
+            stringB = stringB.ToLower();
+
+            char[] charArrayA = stringA.ToCharArray();
+            char[] charArrayB = stringB.ToCharArray();
+
+            Array.Sort(charArrayA);
+            Array.Sort(charArrayB);
+
+            stringA = new string(charArrayA);
+            stringB = new string(charArrayB);
+
+            if (stringA == stringB)
+                return true;
+            else
+                return false;
+        }
+
+        //Not added to website yet
+        public string RemoveDups(string inputString)
+        {
+            char[] charArray = inputString.ToCharArray();
+            List<char> oringalChars = new List<char>(charArray);
+            List<char> uniqueChars = new List<char>();
+
+            for (int i = 0; i < oringalChars.Count; i++)
+            {
+                if (uniqueChars.Contains(oringalChars[i]))
+                {
+                    oringalChars.RemoveAt(i);
+                    i -= 1;
+                }
+                else
+                {
+                    uniqueChars.Add(oringalChars[i]);
+                }
+            }
+
+            inputString = new string(oringalChars.ToArray());
+
+            return inputString;
+        }
+
+        //Not added to website yet
+        public int CountMin(string stringInput)
+        {
+            char[] charArray = stringInput.ToCharArray();
+            bool isPalindrome = true;
+            int i = 0;
+
+            while (isPalindrome && i < charArray.Length - 1)
+            {
+                if (charArray[i] != charArray[charArray.Length - (i + 1)])
+                    isPalindrome = false;
+
+                i++;
+            }
+
+            if (isPalindrome)
+                return 0;
+
+            //check for string of matching chars on either end of the string
+            bool matchingChars = true;
+            int matchingCharsCount = 1;
+            int x = 0;
+            while (matchingChars && x < charArray.Length - 1)
+            {
+                if ((charArray[x] != charArray[x + 1]) && (charArray[charArray.Length - (x + 1)] != charArray[charArray.Length - (x + 2)]))
+                    matchingChars = false;
+                else
+                    matchingCharsCount++;
+
+                x++;
+            }
+
+            return charArray.Length - matchingCharsCount;
+        }
     }
 }

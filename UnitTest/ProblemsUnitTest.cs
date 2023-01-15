@@ -87,5 +87,56 @@ namespace UnitTest
             number = ps.RomanToDecimal(romanNumeral);
             Assert.AreEqual(1, number);
         }
+
+        [TestMethod]
+        public void ProblemSolving_IsAnagram()
+        {
+            ProblemSolving ps = new ProblemSolving();
+            string stringA = "geeksforgeeks";
+            string stringB = "forgeeksgeeks";
+            Assert.IsTrue(ps.IsAnagram(stringA, stringB));
+
+            stringA = "allergic";
+            stringB = "allergy";
+            Assert.IsFalse(ps.IsAnagram(stringA, stringB));
+        }
+
+        [TestMethod]
+        public void ProblemSolving_RemoveDups()
+        {
+            ProblemSolving ps = new ProblemSolving();
+            string stringInput = "zvvo";
+            stringInput = ps.RemoveDups(stringInput);
+            Assert.AreEqual("zvo", stringInput);
+
+            stringInput = "ffofofxxxxxfofofyofy";
+            stringInput = ps.RemoveDups(stringInput);
+            Assert.AreEqual("foxy", stringInput);
+        }
+
+        [TestMethod]
+        public void ProblemSolving_CountMin()
+        {
+            ProblemSolving ps = new ProblemSolving();
+            string stringInput = "abcd";
+            int number = ps.CountMin(stringInput);
+            Assert.AreEqual(3, number);
+
+            stringInput = "abcba";
+            number = ps.CountMin(stringInput);
+            Assert.AreEqual(0, number);
+
+            stringInput = "aa";
+            number = ps.CountMin(stringInput);
+            Assert.AreEqual(0, number);
+
+            stringInput = "aaabcc";
+            number = ps.CountMin(stringInput);
+            Assert.AreEqual(3, number);
+
+            stringInput = "xyfghtm";
+            number = ps.CountMin(stringInput);
+            Assert.AreEqual(6, number);
+        }
     }
 }

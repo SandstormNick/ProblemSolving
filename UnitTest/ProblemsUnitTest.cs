@@ -152,5 +152,16 @@ namespace UnitTest
             stringInput = "-123";
             Assert.AreEqual(-123, ps.Atoi(stringInput));
         }
+
+        [TestMethod]
+        public void ProblemSolving_StrStr()
+        {
+            ProblemSolving ps = new ProblemSolving();
+            string stringInput = "GeeksForGeeks";
+            Assert.AreEqual(5, ps.StrStr(stringInput, "For"));
+
+            stringInput = "GeeksForGeeks";
+            Assert.AreEqual(-1, ps.StrStr(stringInput, "Fr"));
+        }
     }
 }

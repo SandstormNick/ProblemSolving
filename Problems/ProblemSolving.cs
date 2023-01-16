@@ -356,5 +356,16 @@ namespace Problems
 
             return int.Parse(stringInput);
         }
+
+        //Not added to website yet
+        public int StrStr(string stringInput, string target)
+        {
+            if (stringInput.Contains(target))
+            {
+                return stringInput.IndexOf(target);
+            }
+
+            return -1;
+        }
     }
 }

@@ -138,5 +138,19 @@ namespace UnitTest
             number = ps.CountMin(stringInput);
             Assert.AreEqual(6, number);
         }
+
+        [TestMethod]
+        public void ProblemSolving_Atoi()
+        {
+            ProblemSolving ps = new ProblemSolving();
+            string stringInput = "123";
+            Assert.AreEqual(123, ps.Atoi(stringInput));
+
+            stringInput = "21a";
+            Assert.AreEqual(-1, ps.Atoi(stringInput));
+
+            stringInput = "-123";
+            Assert.AreEqual(-123, ps.Atoi(stringInput));
+        }
     }
 }

@@ -334,5 +334,27 @@ namespace Problems
 
             return charArray.Length - matchingCharsCount;
         }
+
+        //Not added to website yet
+        public int Atoi(string stringInput)
+        {
+            char[] charArray = stringInput.ToCharArray();
+
+            for (int i = 0; i < charArray.Length; i++)
+            {
+                if (i == 0)
+                {
+                    if (!"-0123456789".Contains(charArray[i]))
+                        return -1;
+                }
+                if (i > 0)
+                {
+                    if (!"0123456789".Contains(charArray[i]))
+                        return -1;
+                }
+            }
+
+            return int.Parse(stringInput);
+        }
     }
 }

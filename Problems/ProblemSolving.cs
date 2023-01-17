@@ -356,5 +356,10 @@ namespace Problems
 
             return int.Parse(stringInput);
         }
+
+        public string LongestCommonPrefix(string[] stringArray)
+        {
+            return "";
+        }
     }
 }

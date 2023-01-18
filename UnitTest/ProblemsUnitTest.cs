@@ -11,39 +11,39 @@ namespace UnitTest
         [TestMethod]
         public void LongestPalindrome_longestPalin()
         {
-            LongestPalindrome lp = new LongestPalindrome();
+            StringProblemSolving sps = new StringProblemSolving();
 
             string longestPalin = "aaaabbaa";
-            longestPalin = lp.longestPalin(longestPalin);
+            longestPalin = sps.longestPalin(longestPalin);
             Assert.AreEqual("aabbaa", longestPalin);
 
             longestPalin = "abcba";
-            longestPalin = lp.longestPalin(longestPalin);
+            longestPalin = sps.longestPalin(longestPalin);
             Assert.AreEqual("abcba", longestPalin);
 
             longestPalin = "xfjtmofabbayzakrpxyzyxootb";
-            longestPalin = lp.longestPalin(longestPalin);
+            longestPalin = sps.longestPalin(longestPalin);
             Assert.AreEqual("xyzyx", longestPalin);
         }
 
         [TestMethod]
         public void DistinctCharacters_LongestSubstrDitinctChars()
         {
-            DistinctCharacters dc = new DistinctCharacters();
+            StringProblemSolving sps = new StringProblemSolving();
 
             string testString = "geeksforgeeks";
-            testString = dc.LongestSubstrDitinctChars(testString);
+            testString = sps.LongestSubstrDitinctChars(testString);
             Assert.AreEqual("efgkors", testString);
 
             testString = "aaa";
-            testString = dc.LongestSubstrDitinctChars(testString);
+            testString = sps.LongestSubstrDitinctChars(testString);
             Assert.AreEqual("a", testString);
         }
 
         [TestMethod]
         public void ProblemSolving_RecursiveRemove()
         {
-            ProblemSolving ps = new ProblemSolving();
+            StringProblemSolving ps = new StringProblemSolving();
             string testString = "geeksforgeek";
             testString = ps.RecursiveRemove(testString);
             Assert.AreEqual("gksforgk", testString);
@@ -56,7 +56,7 @@ namespace UnitTest
         [TestMethod]
         public void ProblemSolving_IsRotated()
         {
-            ProblemSolving ps = new ProblemSolving();
+            StringProblemSolving ps = new StringProblemSolving();
             string rotateString = "amazon", compareString = "azonam";
             Assert.IsTrue(ps.IsRotated(rotateString, compareString));
 
@@ -70,7 +70,7 @@ namespace UnitTest
         [TestMethod]
         public void ProblemSolving_RomanToDecimal()
         {
-            ProblemSolving ps = new ProblemSolving();
+            StringProblemSolving ps = new StringProblemSolving();
             string romanNumeral = "MMMCMXCIX";
             int number = ps.RomanToDecimal(romanNumeral);
             Assert.AreEqual(3999, number);
@@ -91,7 +91,7 @@ namespace UnitTest
         [TestMethod]
         public void ProblemSolving_IsAnagram()
         {
-            ProblemSolving ps = new ProblemSolving();
+            StringProblemSolving ps = new StringProblemSolving();
             string stringA = "geeksforgeeks";
             string stringB = "forgeeksgeeks";
             Assert.IsTrue(ps.IsAnagram(stringA, stringB));
@@ -104,7 +104,7 @@ namespace UnitTest
         [TestMethod]
         public void ProblemSolving_RemoveDups()
         {
-            ProblemSolving ps = new ProblemSolving();
+            StringProblemSolving ps = new StringProblemSolving();
             string stringInput = "zvvo";
             stringInput = ps.RemoveDups(stringInput);
             Assert.AreEqual("zvo", stringInput);
@@ -117,7 +117,7 @@ namespace UnitTest
         [TestMethod]
         public void ProblemSolving_CountMin()
         {
-            ProblemSolving ps = new ProblemSolving();
+            StringProblemSolving ps = new StringProblemSolving();
             string stringInput = "abcd";
             int number = ps.CountMin(stringInput);
             Assert.AreEqual(3, number);
@@ -142,7 +142,7 @@ namespace UnitTest
         [TestMethod]
         public void ProblemSolving_Atoi()
         {
-            ProblemSolving ps = new ProblemSolving();
+            StringProblemSolving ps = new StringProblemSolving();
             string stringInput = "123";
             Assert.AreEqual(123, ps.Atoi(stringInput));
 
@@ -156,7 +156,7 @@ namespace UnitTest
         [TestMethod]
         public void ProblemSolving_StrStr()
         {
-            ProblemSolving ps = new ProblemSolving();
+            StringProblemSolving ps = new StringProblemSolving();
             string stringInput = "GeeksForGeeks";
             Assert.AreEqual(5, ps.StrStr(stringInput, "For"));
 
@@ -167,7 +167,7 @@ namespace UnitTest
         [TestMethod]
         public void ProblemSolving_LongestCommonPrefix()
         {
-            ProblemSolving ps = new ProblemSolving();
+            StringProblemSolving ps = new StringProblemSolving();
             string[] stringArray = { "geeksforgeeks", "geeks", "geek", "geezer" };
             Assert.AreEqual("gee", ps.LongestCommonPrefix(stringArray));
 

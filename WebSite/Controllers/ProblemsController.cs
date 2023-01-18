@@ -53,9 +53,8 @@ namespace WebSite.Controllers
         {
             problems.ProblemTitle = "Reverse Words In String";
 
-            ReverseWordsInString reverseWordsInString = new ReverseWordsInString();
-            problems.InputString = reverseWordsInString.CleanString(problems.InputString);
-            problems.StringAnswer = reverseWordsInString.reverseWords(problems.InputString);
+            StringProblemSolving sps = new StringProblemSolving();
+            problems.StringAnswer = sps.ReverseWords(problems.InputString);
 
             return View("ReverseWordsInString", problems);
         }
@@ -64,8 +63,8 @@ namespace WebSite.Controllers
         {
             problems.ProblemTitle = "Longest Palindrome";
 
-            LongestPalindrome lp = new LongestPalindrome();
-            problems.StringAnswer = lp.longestPalin(problems.InputString);
+            StringProblemSolving sps = new StringProblemSolving();
+            problems.StringAnswer = sps.longestPalin(problems.InputString);
 
             return View("LongestPalindrome", problems);
         }
@@ -74,8 +73,8 @@ namespace WebSite.Controllers
         {
             problems.ProblemTitle = "Longest Distinct characters in string";
 
-            DistinctCharacters dc = new DistinctCharacters();
-            problems.StringAnswer = dc.LongestSubstrDitinctChars(problems.InputString);
+            StringProblemSolving sps = new StringProblemSolving();
+            problems.StringAnswer = sps.LongestSubstrDitinctChars(problems.InputString);
 
             return View("DistinctCharacters", problems);
         }
@@ -94,7 +93,7 @@ namespace WebSite.Controllers
         {
             problem.ProblemTitle = "Roman To Integer";
 
-            ProblemSolving ps = new ProblemSolving();
+            StringProblemSolving ps = new StringProblemSolving();
             problem.InputString = problem.InputString.ToUpper();
             problem.StringAnswer = ps.RomanToDecimal(problem.InputString).ToString();
 

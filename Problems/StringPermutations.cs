@@ -8,6 +8,7 @@ namespace Problems
 {
     public class StringPermutations
     {
+        //Try get this to work in one method
         List<string> permutations { get; set; }
 
         public StringPermutations()

@@ -367,5 +367,10 @@ namespace Problems
 
             return -1;
         }
+
+        public string LongestCommonPrefix(string[] stringArray)
+        {
+            return "";
+        }
     }
 }

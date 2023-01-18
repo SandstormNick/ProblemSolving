@@ -370,7 +370,39 @@ namespace Problems
 
         public string LongestCommonPrefix(string[] stringArray)
         {
-            return "";
+            bool stillAMatch = true;
+            string shortestWord = stringArray[0];
+            foreach(string word in stringArray)
+            {
+                if (word.Length < shortestWord.Length)
+                    shortestWord = word;
+            }
+
+            char[] shortestWordArray = shortestWord.ToCharArray();
+            string commonPrefix = "";
+
+            char[] charArray;
+            int i = 0;
+            while (stillAMatch && i < shortestWordArray.Length)
+            {
+                for (int x = 0; x < stringArray.Length; x++)
+                {
+                    charArray = stringArray[x].ToCharArray();
+                    if (charArray[i] != shortestWordArray[i])
+                    {
+                        stillAMatch= false;
+                    }
+                }
+                if (stillAMatch)
+                    commonPrefix += shortestWordArray[i].ToString();
+                i++;
+            }
+
+
+            if (commonPrefix != "")
+                return commonPrefix;
+            else
+                return "-1";
         }
     }
 }

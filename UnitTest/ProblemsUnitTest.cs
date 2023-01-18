@@ -163,5 +163,16 @@ namespace UnitTest
             stringInput = "GeeksForGeeks";
             Assert.AreEqual(-1, ps.StrStr(stringInput, "Fr"));
         }
+
+        [TestMethod]
+        public void ProblemSolving_LongestCommonPrefix()
+        {
+            ProblemSolving ps = new ProblemSolving();
+            string[] stringArray = { "geeksforgeeks", "geeks", "geek", "geezer" };
+            Assert.AreEqual("gee", ps.LongestCommonPrefix(stringArray));
+
+            string[] stringArray2 = { "hello", "world" };
+            Assert.AreEqual("-1", ps.LongestCommonPrefix(stringArray2));
+        }
     }
 }

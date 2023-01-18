@@ -334,5 +334,75 @@ namespace Problems
 
             return charArray.Length - matchingCharsCount;
         }
+
+        //Not added to website yet
+        public int Atoi(string stringInput)
+        {
+            char[] charArray = stringInput.ToCharArray();
+
+            for (int i = 0; i < charArray.Length; i++)
+            {
+                if (i == 0)
+                {
+                    if (!"-0123456789".Contains(charArray[i]))
+                        return -1;
+                }
+                if (i > 0)
+                {
+                    if (!"0123456789".Contains(charArray[i]))
+                        return -1;
+                }
+            }
+
+            return int.Parse(stringInput);
+        }
+
+        //Not added to website yet
+        public int StrStr(string stringInput, string target)
+        {
+            if (stringInput.Contains(target))
+            {
+                return stringInput.IndexOf(target);
+            }
+
+            return -1;
+        }
+
+        public string LongestCommonPrefix(string[] stringArray)
+        {
+            bool stillAMatch = true;
+            string shortestWord = stringArray[0];
+            foreach(string word in stringArray)
+            {
+                if (word.Length < shortestWord.Length)
+                    shortestWord = word;
+            }
+
+            char[] shortestWordArray = shortestWord.ToCharArray();
+            string commonPrefix = "";
+
+            char[] charArray;
+            int i = 0;
+            while (stillAMatch && i < shortestWordArray.Length)
+            {
+                for (int x = 0; x < stringArray.Length; x++)
+                {
+                    charArray = stringArray[x].ToCharArray();
+                    if (charArray[i] != shortestWordArray[i])
+                    {
+                        stillAMatch= false;
+                    }
+                }
+                if (stillAMatch)
+                    commonPrefix += shortestWordArray[i].ToString();
+                i++;
+            }
+
+
+            if (commonPrefix != "")
+                return commonPrefix;
+            else
+                return "-1";
+        }
     }
 }

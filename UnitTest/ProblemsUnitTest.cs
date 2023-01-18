@@ -138,5 +138,41 @@ namespace UnitTest
             number = ps.CountMin(stringInput);
             Assert.AreEqual(6, number);
         }
+
+        [TestMethod]
+        public void ProblemSolving_Atoi()
+        {
+            ProblemSolving ps = new ProblemSolving();
+            string stringInput = "123";
+            Assert.AreEqual(123, ps.Atoi(stringInput));
+
+            stringInput = "21a";
+            Assert.AreEqual(-1, ps.Atoi(stringInput));
+
+            stringInput = "-123";
+            Assert.AreEqual(-123, ps.Atoi(stringInput));
+        }
+
+        [TestMethod]
+        public void ProblemSolving_StrStr()
+        {
+            ProblemSolving ps = new ProblemSolving();
+            string stringInput = "GeeksForGeeks";
+            Assert.AreEqual(5, ps.StrStr(stringInput, "For"));
+
+            stringInput = "GeeksForGeeks";
+            Assert.AreEqual(-1, ps.StrStr(stringInput, "Fr"));
+        }
+
+        [TestMethod]
+        public void ProblemSolving_LongestCommonPrefix()
+        {
+            ProblemSolving ps = new ProblemSolving();
+            string[] stringArray = { "geeksforgeeks", "geeks", "geek", "geezer" };
+            Assert.AreEqual("gee", ps.LongestCommonPrefix(stringArray));
+
+            string[] stringArray2 = { "hello", "world" };
+            Assert.AreEqual("-1", ps.LongestCommonPrefix(stringArray2));
+        }
     }
 }

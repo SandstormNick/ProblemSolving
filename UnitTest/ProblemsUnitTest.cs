@@ -4,7 +4,7 @@ using Problems;
 namespace UnitTest
 {
     [TestClass]
-    public class ProblemsUnitTest
+    public class StringUnitTest
     {
         //naming convention = ClassName_methodName
 

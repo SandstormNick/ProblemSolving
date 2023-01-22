@@ -32,5 +32,12 @@ namespace Problems
             int[] returnArray = { firstElementPosition, lastElementPosition };
             return returnArray;
         }
+
+        public int[] CountTriplet()
+        {
+            int[] output = {1};
+
+            return output;
+        }
     }
 }

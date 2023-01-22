@@ -3,11 +3,10 @@ using Problems;
 
 namespace UnitTest
 {
+    //naming convention = ClassName_methodName
     [TestClass]
-    public class ProblemsUnitTest
+    public class StringUnitTest
     {
-        //naming convention = ClassName_methodName
-
         [TestMethod]
         public void LongestPalindrome_longestPalin()
         {
@@ -173,6 +172,28 @@ namespace UnitTest
 
             string[] stringArray2 = { "hello", "world" };
             Assert.AreEqual("-1", ps.LongestCommonPrefix(stringArray2));
+        }
+    }
+
+    [TestClass]
+    public class ArrayUnitTest
+    {
+        [TestMethod]
+        public void ArrayProblemSolving()
+        {
+            ArrayProblemSolving aps = new ArrayProblemSolving();
+            int[] inputArray = { 1, 2, 3, 7, 5 };
+            int expectedTotal = 12;
+            int[] expectedArray = { 1, 3 };
+            int[] actualArray = aps.SubarraySum(inputArray, expectedTotal);
+            CollectionAssert.AreEqual(expectedArray, actualArray);
+
+
+            int[] inputArray2 = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            int expectedTotal2 = 15;
+            int[] expectedArray2 = { 0, 4 };
+            int[] actualArray2 = aps.SubarraySum(inputArray2, expectedTotal2);
+            CollectionAssert.AreEqual(expectedArray2, actualArray2);
         }
     }
 }

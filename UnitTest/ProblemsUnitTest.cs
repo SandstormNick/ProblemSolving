@@ -179,7 +179,7 @@ namespace UnitTest
     public class ArrayUnitTest
     {
         [TestMethod]
-        public void ArrayProblemSolving()
+        public void ArrayProblemSolving_SubarraySum()
         {
             ArrayProblemSolving aps = new ArrayProblemSolving();
             int[] inputArray = { 1, 2, 3, 7, 5 };
@@ -194,6 +194,14 @@ namespace UnitTest
             int[] expectedArray2 = { 0, 4 };
             int[] actualArray2 = aps.SubarraySum(inputArray2, expectedTotal2);
             CollectionAssert.AreEqual(expectedArray2, actualArray2);
+        }
+
+        [TestMethod]
+        public void ArrayProblemSolving_CountTriplet()
+        {
+            ArrayProblemSolving aps = new ArrayProblemSolving();
+            int[] inputArray = { 1, 5, 3, 2 };
+            Assert.AreEqual(2, aps.CountTriplet(inputArray));
         }
     }
 }

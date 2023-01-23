@@ -33,11 +33,35 @@ namespace Problems
             return returnArray;
         }
 
-        public int[] CountTriplet()
+        public int CountTriplet(int[] inputArray)
         {
-            int[] output = {1};
+            int triplets = 0;
+            int currentInt = 0; //what we're trying to equal
+            int pointer = 0; 
 
-            return output;
+            for (int i = 0; i < inputArray.Length - 1; i++)
+            {
+                if (inputArray[pointer] + inputArray[i+1] == inputArray[currentInt])
+                {
+                    triplets++;
+                }
+
+                if (i == inputArray.Length - 1 && i == pointer)
+                {
+                    currentInt++;
+                    i = currentInt;
+                    pointer = currentInt;
+                }
+
+                if (i == inputArray.Length - 1 && i != pointer)
+                {
+                    i = currentInt;
+                    pointer++;
+                }
+                
+            }
+
+            return triplets;
         }
     }
 }

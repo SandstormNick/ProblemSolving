@@ -42,10 +42,7 @@ namespace Problems
 
             int triplets = 0;
             int currentInt = 0; //what we're trying to equal
-            int pointer = 0; 
-            //4 3 2
-            //0 1 2
-            //length = 4
+            int pointer = 0;
 
             for (int i = 0; i < inputArray.Length; i++)
             {
@@ -63,8 +60,8 @@ namespace Problems
 
                 if (i == inputArray.Length - 1 && i != pointer)
                 {
-                    i = currentInt;
                     pointer++;
+                    i = pointer - 1;
                 }
             }
 

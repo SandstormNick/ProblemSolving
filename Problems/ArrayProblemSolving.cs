@@ -33,15 +33,23 @@ namespace Problems
             return returnArray;
         }
 
+        //Not added to website
         public int CountTriplet(int[] inputArray)
         {
+            //inputArray = distinct integers
+            Array.Sort(inputArray);
+            Array.Reverse(inputArray);
+
             int triplets = 0;
             int currentInt = 0; //what we're trying to equal
             int pointer = 0; 
+            //4 3 2
+            //0 1 2
+            //length = 4
 
-            for (int i = 0; i < inputArray.Length - 1; i++)
+            for (int i = 0; i < inputArray.Length; i++)
             {
-                if (inputArray[pointer] + inputArray[i+1] == inputArray[currentInt])
+                if (i + 1 < inputArray.Length && pointer != (i + 1) && inputArray[pointer] + inputArray[i+1] == inputArray[currentInt])
                 {
                     triplets++;
                 }
@@ -58,7 +66,6 @@ namespace Problems
                     i = currentInt;
                     pointer++;
                 }
-                
             }
 
             return triplets;

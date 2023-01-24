@@ -202,6 +202,18 @@ namespace UnitTest
             ArrayProblemSolving aps = new ArrayProblemSolving();
             int[] inputArray = { 1, 5, 3, 2 };
             Assert.AreEqual(2, aps.CountTriplet(inputArray));
+
+            int[] inputArray2 = { 2, 3, 4 };
+            Assert.AreEqual(0, aps.CountTriplet(inputArray2));
+
+            int[] inputArray3 = { 10, 12, 20, 8, 2, 4, 6, 1 };
+            Assert.AreEqual(7, aps.CountTriplet(inputArray3)); //does not equal
+
+            int[] inputArray4 = { 2, 48, 16, 50, 5 };
+            Assert.AreEqual(1, aps.CountTriplet(inputArray4));
+
+            int[] inputArray5 = { 9, 10, 8, 5, 6, 4, 7, 3, 1, 2 }; 
+            Assert.AreEqual(20, aps.CountTriplet(inputArray5)); //does not equal
         }
     }
 }

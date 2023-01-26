@@ -67,5 +67,27 @@ namespace Problems
 
             return triplets;
         }
+
+        public int MaxSubarraySum(int[] inputArray)
+        {
+            int sum = inputArray[0];
+            int pointer = 0;
+
+            while (pointer < inputArray.Length)
+            {
+                int temp = 0;
+                for (int i = pointer; i < inputArray.Length; i++)
+                {
+                    temp += inputArray[i];
+                    if (temp > sum)
+                    {
+                        sum = temp;
+                    }
+                }
+                pointer++;
+            }
+
+            return sum;
+        }
     }
 }

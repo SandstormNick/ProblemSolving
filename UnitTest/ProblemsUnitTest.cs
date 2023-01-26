@@ -215,5 +215,19 @@ namespace UnitTest
             int[] inputArray5 = { 9, 10, 8, 5, 6, 4, 7, 3, 1, 2 }; 
             Assert.AreEqual(20, aps.CountTriplet(inputArray5)); //does not equal
         }
+
+        [TestMethod]
+        public void ArrayProblemSolving_MaxSubarraySum()
+        {
+            ArrayProblemSolving aps = new ArrayProblemSolving();
+            int[] inputArray = { 1, 2, 3, -2, 5 };
+            Assert.AreEqual(9, aps.MaxSubarraySum(inputArray));
+
+            int[] inputArray2 = { -1, -2, -3, -4, -5 };
+            Assert.AreEqual(-1, aps.MaxSubarraySum(inputArray2));
+
+            int[] inputArray3 = { 6, 4, -1, 3, -15, 10, 5, -14, 13, -2 };
+            Assert.AreEqual(15, aps.MaxSubarraySum(inputArray3));
+        }
     }
 }

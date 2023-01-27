@@ -229,5 +229,16 @@ namespace UnitTest
             int[] inputArray3 = { 6, 4, -1, 3, -15, 10, 5, -14, 13, -2 };
             Assert.AreEqual(15, aps.MaxSubarraySum(inputArray3));
         }
+
+        [TestMethod]
+        public void ArrayProblemSolving_MissingNumber()
+        {
+            ArrayProblemSolving aps = new ArrayProblemSolving();
+            int[] inputArray = { 6, 1, 2, 8, 3, 4, 7, 10, 5 };
+            Assert.AreEqual(9, aps.MissingNumber(inputArray));
+
+            int[] inputArray2 = { 1, 2, 3, 5 };
+            Assert.AreEqual(4, aps.MissingNumber(inputArray2));
+        }
     }
 }

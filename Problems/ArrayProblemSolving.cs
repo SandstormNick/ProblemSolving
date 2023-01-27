@@ -68,6 +68,7 @@ namespace Problems
             return triplets;
         }
 
+        //Not added to website
         public int MaxSubarraySum(int[] inputArray)
         {
             int sum = inputArray[0];
@@ -88,6 +89,27 @@ namespace Problems
             }
 
             return sum;
+        }
+
+        //Not added to website
+        public int MissingNumber(int[] inputArray)
+        {
+            //Given an array of size N-1 such that it only contains distinct integers in the range of 1 to N. (Don't include 0)
+            //Find the missing element.
+
+            int missingNumber = -1;
+
+            Array.Sort(inputArray);
+            for (int i = 0; i < inputArray.Length; i++)
+            {
+                if (inputArray[i] != i + 1)
+                {
+                    missingNumber = i + 1;
+                    break;
+                }
+            }
+
+            return missingNumber;
         }
     }
 }

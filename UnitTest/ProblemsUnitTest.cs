@@ -240,5 +240,23 @@ namespace UnitTest
             int[] inputArray2 = { 1, 2, 3, 5 };
             Assert.AreEqual(4, aps.MissingNumber(inputArray2));
         }
+
+        [TestMethod]
+        public void ArrayProblemSolving_Merge()
+        {
+            ArrayProblemSolving aps = new ArrayProblemSolving();
+            int[] inputArray1 = { 1, 3, 5, 7 };
+            int[] inputArray2 = { 0, 2, 6, 8, 9 };
+            int[] expectedArray = { 0, 1, 2, 3, 5, 6, 7, 8, 9 };
+            int[] actualArray = aps.Merge(inputArray1, inputArray2);
+            CollectionAssert.AreEqual(expectedArray, actualArray);
+
+
+            int[] inputArray3 = { 10, 12 };
+            int[] inputArray4 = { 5, 18, 20 };
+            int[] expectedArray2 = { 5, 10, 12, 18, 20 };
+            int[] actualArray2 = aps.Merge(inputArray3, inputArray4);
+            CollectionAssert.AreEqual(expectedArray2, actualArray2);
+        }
     }
 }

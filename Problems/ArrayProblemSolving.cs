@@ -111,5 +111,49 @@ namespace Problems
 
             return missingNumber;
         }
+
+        //Not added to website
+        public int[] Merge(int[] array1, int[] array2)
+        {
+            List<int> biggerList = new List<int>();
+            List<int> smallerList = new List<int>();
+
+            if (array1.Length < array2.Length)
+            {
+                biggerList = array2.Cast<int>().ToList();
+                smallerList = array1.Cast<int>().ToList();
+            }
+
+            int outer = 0;
+            int pointer = 0;
+
+            while (outer < biggerList.Count)
+            {
+                for (int inner = 0; inner < smallerList.Count; inner++)
+                {
+                    if (outer + 1 < biggerList.Count && biggerList[outer] < smallerList[inner] && smallerList[inner] < biggerList[outer + 1])
+                    {
+                        int temp = biggerList[outer + 1];
+                        biggerList[outer + 1] = smallerList[inner];
+                        smallerList[inner] = temp;
+
+                        outer++;
+                        inner = 0;
+                    }
+                    else
+                    {
+                        outer = pointer;
+                    }
+                }
+                pointer++;
+            }
+
+            smallerList.Sort();
+
+            var mergedList = biggerList.Concat(smallerList);
+
+            return mergedList.ToArray();
+
+        }
     }
 }

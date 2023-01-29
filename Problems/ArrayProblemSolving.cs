@@ -155,5 +155,10 @@ namespace Problems
             return mergedList.ToArray();
 
         }
+
+        public int[] Rearrange(int[] inputArray)
+        {
+            return inputArray;
+        }
     }
 }

@@ -179,7 +179,7 @@ namespace UnitTest
     public class ArrayUnitTest
     {
         [TestMethod]
-        public void ArrayProblemSolving()
+        public void ArrayProblemSolving_SubarraySum()
         {
             ArrayProblemSolving aps = new ArrayProblemSolving();
             int[] inputArray = { 1, 2, 3, 7, 5 };
@@ -193,6 +193,69 @@ namespace UnitTest
             int expectedTotal2 = 15;
             int[] expectedArray2 = { 0, 4 };
             int[] actualArray2 = aps.SubarraySum(inputArray2, expectedTotal2);
+            CollectionAssert.AreEqual(expectedArray2, actualArray2);
+        }
+
+        [TestMethod]
+        public void ArrayProblemSolving_CountTriplet()
+        {
+            ArrayProblemSolving aps = new ArrayProblemSolving();
+            int[] inputArray = { 1, 5, 3, 2 };
+            Assert.AreEqual(2, aps.CountTriplet(inputArray));
+
+            int[] inputArray2 = { 2, 3, 4 };
+            Assert.AreEqual(0, aps.CountTriplet(inputArray2));
+
+            int[] inputArray3 = { 10, 12, 20, 8, 2, 4, 6, 1 };
+            Assert.AreEqual(7, aps.CountTriplet(inputArray3)); //does not equal
+
+            int[] inputArray4 = { 2, 48, 16, 50, 5 };
+            Assert.AreEqual(1, aps.CountTriplet(inputArray4));
+
+            int[] inputArray5 = { 9, 10, 8, 5, 6, 4, 7, 3, 1, 2 }; 
+            Assert.AreEqual(20, aps.CountTriplet(inputArray5)); //does not equal
+        }
+
+        [TestMethod]
+        public void ArrayProblemSolving_MaxSubarraySum()
+        {
+            ArrayProblemSolving aps = new ArrayProblemSolving();
+            int[] inputArray = { 1, 2, 3, -2, 5 };
+            Assert.AreEqual(9, aps.MaxSubarraySum(inputArray));
+
+            int[] inputArray2 = { -1, -2, -3, -4, -5 };
+            Assert.AreEqual(-1, aps.MaxSubarraySum(inputArray2));
+
+            int[] inputArray3 = { 6, 4, -1, 3, -15, 10, 5, -14, 13, -2 };
+            Assert.AreEqual(15, aps.MaxSubarraySum(inputArray3));
+        }
+
+        [TestMethod]
+        public void ArrayProblemSolving_MissingNumber()
+        {
+            ArrayProblemSolving aps = new ArrayProblemSolving();
+            int[] inputArray = { 6, 1, 2, 8, 3, 4, 7, 10, 5 };
+            Assert.AreEqual(9, aps.MissingNumber(inputArray));
+
+            int[] inputArray2 = { 1, 2, 3, 5 };
+            Assert.AreEqual(4, aps.MissingNumber(inputArray2));
+        }
+
+        [TestMethod]
+        public void ArrayProblemSolving_Merge()
+        {
+            ArrayProblemSolving aps = new ArrayProblemSolving();
+            int[] inputArray1 = { 1, 3, 5, 7 };
+            int[] inputArray2 = { 0, 2, 6, 8, 9 };
+            int[] expectedArray = { 0, 1, 2, 3, 5, 6, 7, 8, 9 };
+            int[] actualArray = aps.Merge(inputArray1, inputArray2);
+            CollectionAssert.AreEqual(expectedArray, actualArray);
+
+
+            int[] inputArray3 = { 10, 12 };
+            int[] inputArray4 = { 5, 18, 20 };
+            int[] expectedArray2 = { 5, 10, 12, 18, 20 };
+            int[] actualArray2 = aps.Merge(inputArray3, inputArray4);
             CollectionAssert.AreEqual(expectedArray2, actualArray2);
         }
     }

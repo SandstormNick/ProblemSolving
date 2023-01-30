@@ -258,5 +258,11 @@ namespace UnitTest
             int[] actualArray2 = aps.Merge(inputArray3, inputArray4);
             CollectionAssert.AreEqual(expectedArray2, actualArray2);
         }
+
+        [TestMethod]
+        public void ArrayProblemSolving_Rearrange()
+        {
+
+        }
     }
 }

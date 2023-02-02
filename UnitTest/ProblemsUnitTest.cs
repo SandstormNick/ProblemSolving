@@ -262,7 +262,14 @@ namespace UnitTest
         [TestMethod]
         public void ArrayProblemSolving_Rearrange()
         {
+            ArrayProblemSolving aps = new ArrayProblemSolving();
+            int[] inputArray1 = { 1, 2, 3, 4, 5, 6 };
+            int[] expectedArray1 = { 6, 1, 5, 2, 4, 3 };
+            CollectionAssert.AreEqual(expectedArray1, aps.Rearrange(inputArray1));
 
+            int[] inputArray2 = { 10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110 };
+            int[] expectedArray2 = { 110, 10, 100, 20, 90, 30, 80, 40, 70, 50, 60 };
+            CollectionAssert.AreEqual(expectedArray2, aps.Rearrange(inputArray2));
         }
     }
 }

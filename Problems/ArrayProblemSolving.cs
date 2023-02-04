@@ -173,5 +173,10 @@ namespace Problems
 
             return inputArray;
         }
+
+        public int[] Sort012(int[] inputArray)
+        {
+            return inputArray;
+        }
     }
 }

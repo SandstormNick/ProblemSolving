@@ -158,6 +158,24 @@ namespace Problems
 
         public int[] Rearrange(int[] inputArray)
         {
+            int tempHigh;
+
+            for (int outer = 0; outer < inputArray.Length; outer+=2)
+            {
+                tempHigh = inputArray[inputArray.Length - 1];
+
+                for (int inner = inputArray.Length - 1; inner > outer; inner--)
+                {
+                    inputArray[inner] = inputArray[inner - 1];
+                }
+                inputArray[outer] = tempHigh;
+            }
+
+            return inputArray;
+        }
+
+        public int[] Sort012(int[] inputArray)
+        {
             return inputArray;
         }
     }

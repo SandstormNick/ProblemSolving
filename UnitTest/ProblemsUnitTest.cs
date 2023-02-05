@@ -271,5 +271,11 @@ namespace UnitTest
             int[] expectedArray2 = { 110, 10, 100, 20, 90, 30, 80, 40, 70, 50, 60 };
             CollectionAssert.AreEqual(expectedArray2, aps.Rearrange(inputArray2));
         }
+
+        [TestMethod]
+        public void ArrayProblemSolving_Sort012()
+        {
+
+        }
     }
 }

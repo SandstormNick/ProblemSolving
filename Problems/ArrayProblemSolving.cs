@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -176,7 +177,35 @@ namespace Problems
 
         public int[] Sort012(int[] inputArray)
         {
+            //Given an array of size N containing only 0s, 1s, and 2s; sort the array in ascending order.
+            //A sorting algorithm
             return inputArray;
         }
+
+        public int EquilibriumPoint(int[] inputArray)
+        {
+            //Given an array A of n positive numbers. The task is to find the first Equilibrium Point in an array. 
+            //Equilibrium Point in an array is a position such that the sum of elements before it is equal to the sum of elements after it.
+
+            //The task is to complete the function equilibriumPoint() which takes the array and n as input parameters and returns the point of equilibrium. Return -1 if no such point exists.
+
+            return -1;
+        }
+
+        public int[] Leader(int[] inputArray)
+        {
+            //Given an array A of positive integers. Your task is to find the leaders in the array.
+            //An element of array is leader if it is greater than or equal to all the elements to its right side.
+            //The rightmost element is always a leader. 
+
+            //A[] = { 16, 17, 4, 3, 5, 2 }
+            //Output: 17 5 2
+
+            return inputArray;
+        }
+
+
+
+
     }
 }

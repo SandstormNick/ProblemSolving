@@ -178,7 +178,24 @@ namespace Problems
         public int[] Sort012(int[] inputArray)
         {
             //Given an array of size N containing only 0s, 1s, and 2s; sort the array in ascending order.
-            //A sorting algorithm
+
+            //Array.Sort(inputArray); --> Cheat way
+
+            bool sorted = false;
+
+            while (!sorted)
+            {
+                sorted = true;
+                for (int i = 0; i < inputArray.Length - 1; i++)
+                {
+                    if (inputArray[i] > inputArray[i + 1])
+                    {
+                        (inputArray[i], inputArray[i + 1]) = (inputArray[i + 1], inputArray[i]);
+                        sorted = false;
+                    }
+                }
+            }
+
             return inputArray;
         }
 

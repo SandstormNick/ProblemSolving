@@ -284,5 +284,11 @@ namespace UnitTest
             int[] expectedArray2 = { 0, 0, 0, 1, 1, 1, 1, 2, 2, 2 };
             CollectionAssert.AreEqual(expectedArray2, aps.Sort012(inputArray2));
         }
+
+        [TestMethod]
+        public void EquilibriumPoint()
+        {
+            //Method to test EquilibriumPoint
+        }
     }
 }

@@ -288,7 +288,15 @@ namespace UnitTest
         [TestMethod]
         public void EquilibriumPoint()
         {
-            //Method to test EquilibriumPoint
+            ArrayProblemSolving aps = new ArrayProblemSolving();
+            int[] inputArray1 = { 1, 3, 5, 2, 2 };
+            Assert.AreEqual(3, aps.EquilibriumPoint(inputArray1));
+
+            int[] inputArray2 = { 1 };
+            Assert.AreEqual(1, aps.EquilibriumPoint(inputArray2));
+
+            int[] inputArray3 = { 1, 2, 2, 9, 2, 3 };
+            Assert.AreEqual(4, aps.EquilibriumPoint(inputArray3));
         }
     }
 }

@@ -207,15 +207,29 @@ namespace Problems
             //The task is to complete the function equilibriumPoint() which takes the array and n as input parameters and returns the point of equilibrium.
             //Return -1 if no such point exists.
 
-            // a loop
-            // use the counter
-            // --> add everything before the counter
-            // --> add everything after the counter
-            // --> if they equal then that is the equilibrium
+            //convert array to list
+            List<int> inputList = inputArray.OfType<int>().ToList();
 
-            //A cheat commit...
+            int beforeEquilibrium = 0;
+            int afterEquilibrium = 0;
+            int equilibriumPoint = -1;
 
-            return -1;
+            if (inputList.Count == 1)
+                return 1;
+
+            for (int i = 1; i < inputList.Count - 1; i++)
+            {
+                beforeEquilibrium = inputList.GetRange(0, i).Sum();
+                afterEquilibrium = inputList.GetRange(i + 1, inputList.Count - (i + 1)).Sum();
+
+                if (beforeEquilibrium == afterEquilibrium)
+                {
+                    equilibriumPoint = i + 1;
+                    break;
+                }
+            }
+
+            return equilibriumPoint;
         }
 
         public int[] Leader(int[] inputArray)

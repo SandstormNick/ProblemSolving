@@ -298,5 +298,18 @@ namespace UnitTest
             int[] inputArray3 = { 1, 2, 2, 9, 2, 3 };
             Assert.AreEqual(4, aps.EquilibriumPoint(inputArray3));
         }
+
+        [TestMethod]
+        public void Leader()
+        {
+            ArrayProblemSolving aps = new ArrayProblemSolving();
+            int[] inputArray1 = { 16, 17, 4, 3, 5, 2 };
+            int[] expectedArray1 = { 17, 5, 2 };
+            CollectionAssert.AreEqual(expectedArray1, aps.Leader(inputArray1));
+
+            int[] inputArray2 = { 12, 19, 10, 9, 5, 8, 1, 4 };
+            int[] expectedArray2 = { 19, 10, 9, 8, 4 };
+            CollectionAssert.AreEqual(expectedArray2, aps.Leader(inputArray2));
+        }
     }
 }

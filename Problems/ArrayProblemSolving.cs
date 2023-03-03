@@ -241,7 +241,24 @@ namespace Problems
             //A[] = { 16, 17, 4, 3, 5, 2 }
             //Output: 17 5 2
 
-            return inputArray;
+            int currentLeader = inputArray[inputArray.Length - 1];
+
+            List<int> leaderList = new List<int>
+            {
+                inputArray[inputArray.Length - 1]
+            };
+
+            for (int i = inputArray.Length - 2; i > -1; i--)
+            {
+                if (inputArray[i] > currentLeader)
+                {
+                    currentLeader = inputArray[i];
+                    leaderList.Add(inputArray[i]);
+                    leaderList = leaderList.OrderByDescending(x => x).ToList();
+                }
+            }
+
+            return leaderList.ToArray();
         }
 
 

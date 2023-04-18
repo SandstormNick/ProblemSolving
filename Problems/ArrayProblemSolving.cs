@@ -261,7 +261,7 @@ namespace Problems
             return leaderList.ToArray();
         }
 
-        public int MinimumPlatforms(int[] arrivalTimes, int[] departureTimes)
+        public int MinimumPlatforms(int[] arrivalTimes, int[] departureTimes, int numberOfTrains)
         {
             //Given arrival and departure times of all trains that reach a railway station.
             //Find the minimum number of platforms required for the railway station so that no train is kept waiting.

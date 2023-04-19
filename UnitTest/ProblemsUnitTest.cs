@@ -1,5 +1,6 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Problems;
+using System.Runtime.Intrinsics.Arm;
 
 namespace UnitTest
 {
@@ -315,6 +316,10 @@ namespace UnitTest
         [TestMethod]
         public void MinimumPlatforms()
         {
+            ArrayProblemSolving aps = new ArrayProblemSolving();
+            int[] arrival = { 0900, 0940, 0950, 1100, 1500, 1800 };
+            int[] depart = { 0910, 1200, 1120, 1130, 1900, 2000 };
+            Assert.AreEqual(3, aps.MinimumPlatforms(arrival, depart, 6));
 
         }
     }

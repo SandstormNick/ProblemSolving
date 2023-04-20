@@ -321,6 +321,14 @@ namespace UnitTest
             int[] depart = { 0910, 1200, 1120, 1130, 1900, 2000 };
             Assert.AreEqual(3, aps.MinimumPlatforms(arrival, depart, 6));
 
+
+            int[] arrival2 = { 0900, 1100, 1235 };
+            int[] depart2 = { 1000, 1200, 1240 };
+            Assert.AreEqual(1, aps.MinimumPlatforms(arrival2, depart2, 3));
+
+            int[] arrival3 = { 0900, 1000, 1030, 1100, 1200, 1210 };
+            int[] depart3 = { 1000, 1020, 1650, 1130, 1230, 1245 };
+            Assert.AreEqual(3, aps.MinimumPlatforms(arrival3, depart3, 6));
         }
     }
 }

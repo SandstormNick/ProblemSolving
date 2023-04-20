@@ -270,8 +270,39 @@ namespace Problems
             //to departure time of the other.At any given instance of time,
             //same platform can not be used for both departure of a train and arrival of another train.
             //In such cases, we need different platforms.
-            
-            return 0;
+
+            //{ 0900, 0940, 0950, 1100, 1500, 1800 };
+            //{ 0910, 1200, 1120, 1130, 1900, 2000 };
+
+            //{ 0900, 1100, 1235 };
+            //{ 1000, 1200, 1240 };
+
+            //{ 0900, 1000, 1030, 1100, 1200, 1210 };
+            //{ 1000, 1020, 1650, 1130, 1230, 1245 };
+
+            int minimumPlatforms = 1;
+            int currentPlatforms;
+
+            int currentTrain;
+
+            for (int allTrainsCount = 1; allTrainsCount < numberOfTrains; allTrainsCount++)
+            {
+                currentPlatforms = 1;
+                currentTrain = allTrainsCount;
+                for (int pastTrains = allTrainsCount - 1; pastTrains >= 0; pastTrains--)
+                {
+                    if (arrivalTimes[currentTrain] <= departureTimes[pastTrains])
+                    {
+                        currentPlatforms++;
+                    }
+                }
+
+                if (currentPlatforms > minimumPlatforms)
+                    minimumPlatforms = currentPlatforms;
+            }
+
+
+            return minimumPlatforms;
         }
 
 

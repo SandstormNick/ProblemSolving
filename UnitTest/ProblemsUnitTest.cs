@@ -311,5 +311,11 @@ namespace UnitTest
             int[] expectedArray2 = { 19, 10, 9, 8, 4 };
             CollectionAssert.AreEqual(expectedArray2, aps.Leader(inputArray2));
         }
+
+        [TestMethod]
+        public void MinimumPlatforms()
+        {
+
+        }
     }
 }
